@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-green-50 text-gray-800 font-sans;
+  }
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-green-900;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl font-bold text-green-800;
+  }
+  h3 {
+    @apply text-xl md:text-2xl font-semibold text-green-800;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply container mx-auto px-4 md:px-6;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 bg-green-700 hover:bg-green-800 text-white font-medium rounded-lg 
+    shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg 
+    shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300;
+  }
+  
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-green-700 text-green-700 hover:bg-green-700 hover:text-white 
+    font-medium rounded-lg transition-all duration-300;
+  }
+  
+  .btn-glass {
+    @apply px-6 py-3 bg-white/80 backdrop-blur-sm border border-green-100 text-green-900 
+    font-medium rounded-lg shadow-sm hover:shadow-md hover:bg-white transition-all duration-300;
+  }
+  
+  .glass {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg;
+  }
+  
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-sm rounded-xl border border-white/20 shadow-md 
+    hover:shadow-lg transition-all duration-300;
+  }
+  
+  .shadow-glass {
+    @apply shadow-lg shadow-green-900/10;
+  }
+}
