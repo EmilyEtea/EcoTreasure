@@ -228,7 +228,7 @@ const TutorialPage = () => {
                 </div>
                 <div className="flex items-center">
                   <span className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-sm mr-3">3</span>
-                  <span className="font-medium">Share your creation with #EmilyEteaUpcycle</span>
+                  <span className="font-medium">Share your creation with #TrashToTreasure</span>
                 </div>
               </div>
             </motion.div>

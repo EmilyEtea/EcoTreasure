@@ -17,6 +17,9 @@ const Footer = () => {
             </Link>
             <p className="text-green-200 mb-4">
               Promoting sustainability through creative upcycling and responsible recycling.
+               <br />
+               <br />
+              Developed by Emily, Max, Arkin, Bernice, and Rogi.
             </p>
             <div className="flex space-x-3 mt-4">
               <a href="#" className="text-green-300 hover:text-lime-300 transform hover:scale-110 transition-all duration-300">

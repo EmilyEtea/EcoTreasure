@@ -16,6 +16,7 @@ const tutorialSchema = yup.object({
   difficulty: yup.string().required('Difficulty level is required'),
   timeRequired: yup.string().required('Time required is required'),
   createdBy: yup.string().required('Your name is required'),
+  imageUrl: yup.string().required('Main image is required'),
   videoUrl: yup.string().url('Must be a valid URL').nullable().transform(value => value === "" ? null : value),
   materials: yup.array().of(
     yup.object({
@@ -201,25 +202,37 @@ const UploadTutorialPage = () => {
 
   // Navigation between form sections
   const goToNextSection = async (nextSection) => {
-    const values = getValues();
-    
-    let shouldProceed = false;
-    
-    if (currentSection === 'basics') {
-      const isValid = await trigger(['title', 'description', 'category', 'difficulty', 'timeRequired', 'createdBy']);
-      shouldProceed = isValid;
-    } else if (currentSection === 'materials') {
-      const isValid = await trigger('materials');
-      shouldProceed = isValid;
+  let shouldProceed = false;
+
+  if (currentSection === 'basics') {
+    const isValidBasics = await trigger([
+      'title', 
+      'description', 
+      'category', 
+      'difficulty', 
+      'timeRequired', 
+      'createdBy',
+      'imageUrl' // <-- Add this
+    ]);
+
+    if (!mainImageData) {
+      toast.error('Please upload a main image before continuing.');
+      return;
     }
-    
-    if (shouldProceed) {
-      setCurrentSection(nextSection);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      toast.error(`Please complete all required fields in this section`);
-    }
-  };
+
+    shouldProceed = isValidBasics;
+  } else if (currentSection === 'materials') {
+    const isValidMaterials = await trigger('materials');
+    shouldProceed = isValidMaterials;
+  }
+
+  if (shouldProceed) {
+    setCurrentSection(nextSection);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    toast.error('Please complete all required fields in this section');
+  }
+};
 
   // Go back to previous section
   const goToPreviousSection = (prevSection) => {
