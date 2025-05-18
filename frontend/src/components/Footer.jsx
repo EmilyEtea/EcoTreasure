@@ -101,8 +101,17 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} Trash to Treasure: Upcycle & Reuse Hub. All rights reserved.
           </p>
           <p className="flex items-center justify-center mt-3 text-sm text-green-400">
-            Made with <FaHeart className="text-red-400 mx-1" /> for a sustainable future
-          </p>
+            Made with <FaHeart className="text-red-400 mx-1" /> for a sustainable future by {' '}
+             <a
+                 href="https://github.com/orgs/TreasureBuilders/people"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="underline hover:text-green-300"
+             >
+           TreasureBuilders
+              </a>.
+            </p>
+
         </div>
       </div>
     </footer>
