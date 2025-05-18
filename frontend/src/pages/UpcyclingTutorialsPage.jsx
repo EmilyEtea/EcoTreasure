@@ -302,7 +302,7 @@ const UpcyclingTutorialsPage = () => {
         
         {/* Featured Tutorials */}
         <div className="mb-12">
-          <h2 className="text-3xl font-semibold mb-6">Featured Projects</h2>
+          <h2 className="text-3xl font-semibold mb-6">DIY Projects</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6">
             {isLoading ? (
               // Loading skeleton
