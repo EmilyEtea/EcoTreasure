@@ -12,14 +12,14 @@ const Footer = () => {
             <Link to="/" className="flex items-center text-xl font-bold mb-4">
               <FaRecycle className="mr-2 text-lime-300" /> 
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-lime-300 to-green-100">
-                Trash to Treasure
+                BasurArt *Trash to Treasure
               </span>
             </Link>
             <p className="text-green-200 mb-4">
               Promoting sustainability through creative upcycling and responsible recycling.
                <br />
                <br />
-              Developed by Emily, Max, Arkin, Bernice, and Rogi.
+              Developed for ITELEC.
             </p>
             <div className="flex space-x-3 mt-4">
               <a href="#" className="text-green-300 hover:text-lime-300 transform hover:scale-110 transition-all duration-300">

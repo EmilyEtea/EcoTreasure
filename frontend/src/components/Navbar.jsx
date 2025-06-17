@@ -41,7 +41,7 @@ const Navbar = () => {
           <Link to="/" className="text-2xl font-bold flex items-center text-white">
             <FaRecycle className="mr-2 text-lime-300" /> 
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-lime-300 to-green-100">
-              Trash to Treasure
+              BasurArt *Trash to Treasure
             </span>
           </Link>
           
